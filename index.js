@@ -1,9 +1,9 @@
 //veribles
 const fs = require("fs");
 const path = require("path");
-const readline= require("readline");
-const {exec} = require('child_process')
-const { ChildProcess } = require("child_process");
+const { exec } = require('child_process');
+
+
 //file content
 
 // js and node file content
@@ -34,11 +34,10 @@ const codewebstr = `
 `
 //command line codes
 
-const commands = [`npm inint -y`]
 
-let codeweb = codewebstr.replace(``);
 
-let deafultnodeCode = codenode.replace(``);
+let codeweb = codewebstr
+let deafultnodeCode = codenode
 
 console.log(deafultnodeCode);
 console.log(codeweb);
@@ -51,11 +50,13 @@ function genfilenode(){
     //create javascript files
     
     
-    fs.writeFile(path.join(__dirname,"test1","index.js"),deafultnodeCode,(err)=>{
+    fs.writeFile(path.join(__dirname,"test1","index.js"),"//main js file"+deafultnodeCode,(err,undefined)=>{
 if(err){
     throw new Error("failed creating the file at \n near line 22 index.js");
 }
-
+if(undefined){
+    console.log("something is worng")
+}
 else{
     console.log("index.js file created succesfuly");
 }
@@ -71,7 +72,7 @@ else{
 
             })
 
-            fs.writeFile(path.join(__dirname,"test1","test.js"),"//test1",(err)=>{
+            fs.writeFile(path.join(__dirname,"test1","test.js"),"//test",(err)=>{
                 if(err){
                     throw new Error("failed creating the file at \n near line 37 test.js");
                 }
@@ -90,29 +91,26 @@ else{
     
 }
 genfilenode()
-
-function runcommandline(command){
+function runcommandline() {
     //run command lines
+    const commands = ['npm init -y'];
 
-    exec (path.join(__dirname,"test1",command, (error,sdtout,sdterr =>{
-        if(error){
-            throw new Error("error failed running command lines  \n near line 79");
-        }if(sdterr){
-            console.log(sdterr);
-        }else{
-        console.log("output" + sdtout)
-        console.log("npm inint complete")
-        }
-    })))
-    
-}
-commands.forEach(comandline => {
-    comandline.runcommandline()
+    commands.forEach(command => {
+        exec(command, { cwd: path.join(__dirname, 'test1') }, (err, stdout, stderr) => {
+            if (err) {
+                console.error('Failed at running the command:', err);
+            } else {
+                console.log('output:', stdout);
+                console.log('npm init complete');
+            }
+        });
     });
+}
+runcommandline()
 
 function genwebfiles(){
 // create html file
-    fs.writeFile(path.join(__dirname,"test1","index.html"),codeweb,(err)=>{
+    fs.writeFile(path.join(__dirname,"test1","index.html"),"<!-- main html page-->"+codeweb,(err)=>{
                     
         if(err){
             throw new Error("failed creating the file at \n near line 46 index.html");
