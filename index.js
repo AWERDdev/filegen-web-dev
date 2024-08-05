@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 //veribles
 const fs = require("fs");
 const path = require("path");
