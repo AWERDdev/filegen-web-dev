@@ -1,126 +1,239 @@
 #!/usr/bin/env node
 
-//veribles
+// Variables
 const fs = require("fs");
 const path = require("path");
 const { exec } = require('child_process');
 
+// File content
 
-//file content
+// Node.js file content
+const codenode = `
+const fs = require("fs");
+const path = require("path");
+const readline = require("readline");
+const { stdin, stdout } = require("process");
+const rl = readline.createInterface({input: stdin, output: stdout});
+`;
 
-// js and node file content
-const codenode =`
-const fs = require("fs")
-const path = require("path")
-const readline= require("readline")
-const { stdin, stdout } = require("process")
-const rl = readline.createInterface({input:stdin,output:stdout})`
-// website content
-
-
-const codewebstr = `
+// Website content
+const codeweb = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/body.css">
+    <link rel="stylesheet" href="styles/title.css">
+    <link rel="stylesheet" href="styles/end.css">
+    <link rel="stylesheet" href="styles/responsive.css">
     <title><!--change me when needed-->app</title>
 </head>
 <body>
     <div class="title-start"></div>
     <div class="main-content"></div>
     <div class="end-bottom"></div>
-    
+    <script src="js/index.js"></script>
 </body>
 </html>
-`
-//command line codes
+`;
 
-
-
-let codeweb = codewebstr
-let deafultnodeCode = codenode
-
-console.log(deafultnodeCode);
-console.log(codeweb);
-
-//functions
-
-
-function genfilenode(){
-
-    //create javascript files
-    
-    
-    fs.writeFile(path.join(__dirname,"test1","index.js"),"//main js file"+deafultnodeCode,(err,undefined)=>{
-if(err){
-    throw new Error("failed creating the file at \n near line 22 index.js");
+// CSS content
+const cssbody = `
+/* Root for font sizes */
+:root {
+    --fs-600: 2rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
 }
-if(undefined){
-    console.log("something is worng")
-}
-else{
-    console.log("index.js file created succesfuly");
-}
-    })
 
-    fs.writeFile(path.join(__dirname,"test1","server.js"),"//server",(err)=>{
-        if(err){
-            throw new Error("failed creating the file at \n near line 29 server.js");
+/* Body */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}`;
+
+const csstitle = `
+/* Root for font sizes */
+:root {
+    --fs-600: 2rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+}
+
+/* Title top */
+.title {
+    width: 100%;
+    min-height: 10vh;
+    margin: 0;
+    padding: 0;
+}`;
+
+const cssmain = `
+/* Root for font sizes */
+:root {
+    --fs-600: 2rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+}`;
+
+const cssend = `
+/* Root for font sizes */
+:root {
+    --fs-600: 2rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+}`;
+
+const cssres = `
+@media(max-width: 600px) {
+    /* Root for font sizes */
+    :root {
+        --fs-600: 1rem;
+        --fs-500: 1rem;
+        --fs-400: 0.56rem;
+    }
+
+    /* Body */
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media(min-width: 601px) {
+    /* Body */
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media(min-width: 768px) {
+    /* Body */
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media(min-width: 992px) {
+    /* Body */
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media(min-width: 1200px) {
+    /* Body */
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}`;
+
+// Command line codes
+const commands = ['npm init -y'];
+
+// Functions
+function runcommands(callback) {
+    function executecommands(index) {
+        if (index >= commands.length) {
+            return callback();
         }
-        else{
-            console.log("server.js file created succesfuly");
-        }
-
-            })
-
-            fs.writeFile(path.join(__dirname,"test1","test.js"),"//test",(err)=>{
-                if(err){
-                    throw new Error("failed creating the file at \n near line 37 test.js");
-                }
-
-                else{
-                    console.log("test.js file created succesfuly");
-                }
-                    }
-                )
-                    
-
-
-
-
-                        
-    
-}
-genfilenode()
-function runcommandline() {
-    //run command lines
-    const commands = ['npm init -y'];
-
-    commands.forEach(command => {
-        exec(command, { cwd: path.join(__dirname, 'test1') }, (err, stdout, stderr) => {
+        exec(commands[index], (err, stdout, stderr) => {
             if (err) {
-                console.error('Failed at running the command:', err);
-            } else {
-                console.log('output:', stdout);
-                console.log('npm init complete');
+                console.error("Failed running command: " + commands[index] + " Error: " + err);
+                return;
+            }
+            console.log(`Output: ${stdout}`);
+            executecommands(index + 1);
+        });
+    }
+    executecommands(0);
+}
+
+function createDirectories(dirs, callback) {
+    let index = 0;
+
+    function createDir() {
+        if (index >= dirs.length) {
+            return callback();
+        }
+        fs.mkdir(dirs[index], { recursive: true }, (err) => {
+            if (err) {
+                console.error("Failed creating directory: " + dirs[index] + " Error: " + err);
+                return;
+            }
+            console.log("Directory created: " + dirs[index]);
+            index++;
+            createDir();
+        });
+    }
+    createDir();
+}
+
+function genfilenode() {
+    // Create JavaScript files
+    const nodefiles = [
+        { path: path.join(process.cwd(), "js", "index.js"), content: "// main js file" },
+        { path: path.join(process.cwd(), "js", "server.js"), content: "// server js file\n" + codenode },
+        { path: path.join(process.cwd(), "js", "test.js"), content: "// test js file" },
+    ];
+    nodefiles.forEach(file => {
+        fs.writeFile(file.path, file.content, (err) => {
+            if (err) {
+                console.error("Failed creating the node/js files: " + err);
+                return;
+            }
+            console.log("Node files created successfully");
+        });
+    });
+}
+
+function genwebfiles() {
+    // Create HTML file
+    fs.writeFile(path.join(process.cwd(), "index.html"), "<!-- main HTML page -->\n" + codeweb, (err) => {
+        if (err) {
+            console.error("Failed creating the file at index.html: " + err);
+            return;
+        }
+        console.log("HTML file created successfully");
+    });
+}
+
+function gencssfiles() {
+    const cssFiles = [
+        { path: path.join(process.cwd(), "styles", "body.css"), content: `/* CSS body */\n${cssbody}` },
+        { path: path.join(process.cwd(), "styles", "title.css"), content: `/* CSS title/top */\n${csstitle}` },
+        { path: path.join(process.cwd(), "styles", "main.css"), content: `/* Main CSS page */\n${cssmain}` },
+        { path: path.join(process.cwd(), "styles", "end.css"), content: `/* End/bottom CSS */\n${cssend}` },
+        { path: path.join(process.cwd(), "styles", "responsive.css"), content: `/* Responsive CSS */\n${cssres}` }
+    ];
+
+    cssFiles.forEach(file => {
+        fs.writeFile(file.path, file.content, (err) => {
+            if (err) {
+                console.error("Failed creating CSS file: " + file.path + " Error: " + err);
             }
         });
     });
 }
-runcommandline()
 
-function genwebfiles(){
-// create html file
-    fs.writeFile(path.join(__dirname,"test1","index.html"),"<!-- main html page-->"+codeweb,(err)=>{
-                    
-        if(err){
-            throw new Error("failed creating the file at \n near line 46 index.html");
-        }
-        else{
-            console.log("html file created succesfuly");
-        }
-            })
-
-}
-genwebfiles()
+// Execute functions
+createDirectories([path.join(process.cwd(), "js"), path.join(process.cwd(), "styles")], () => {
+    runcommands(() => {
+        genfilenode();
+        genwebfiles();
+        gencssfiles();
+    });
+});
