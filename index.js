@@ -141,11 +141,8 @@ const cssres = `
     }
 }`;
 
-// Command line codes
-const commands = ['npm init -y'];
-
 // Functions
-function runcommands(callback) {
+function runcommands(commands, callback) {
     function executecommands(index) {
         if (index >= commands.length) {
             return callback();
@@ -201,13 +198,20 @@ function genfilenode() {
 }
 
 function genwebfiles() {
-    // Create HTML file
-    fs.writeFile(path.join(process.cwd(), "index.html"), "<!-- main HTML page -->\n" + codeweb, (err) => {
-        if (err) {
-            console.error("Failed creating the file at index.html: " + err);
-            return;
-        }
-        console.log("HTML file created successfully");
+    // Create HTML files
+    const htmlFiles = [
+        { path: path.join(process.cwd(), "html", "index.html"), content: "<!-- main HTML page -->" + codeweb },
+        { path: path.join(process.cwd(), "html", "signup.html"), content: "<!-- main HTML page -->" + codeweb },
+        { path: path.join(process.cwd(), "html", "login.html"), content: "<!-- main HTML page -->" + codeweb },
+    ];
+    htmlFiles.forEach(file => {
+        fs.writeFile(file.path, file.content, (err) => {
+            if (err) {
+                console.error("Failed creating HTML file: " + err);
+            } else {
+                console.log("HTML files created successfully");
+            }
+        });
     });
 }
 
@@ -224,14 +228,19 @@ function gencssfiles() {
         fs.writeFile(file.path, file.content, (err) => {
             if (err) {
                 console.error("Failed creating CSS file: " + file.path + " Error: " + err);
+            } else {
+                console.log("CSS files created successfully");
             }
         });
     });
 }
 
 // Execute functions
-createDirectories([path.join(process.cwd(), "js"), path.join(process.cwd(), "styles")], () => {
-    runcommands(() => {
+createDirectories([path.join(process.cwd(), "js"), path.join(process.cwd(), "styles"), path.join(process.cwd(), "html")], () => {
+    const jsDir = path.join(process.cwd(), "js");
+    process.chdir(jsDir);
+    runcommands(['npm init -y'], () => {
+        process.chdir("..");  // Go back to the root directory after npm init
         genfilenode();
         genwebfiles();
         gencssfiles();
