@@ -1,5 +1,5 @@
 {
-  "name": "filegen",
+  "name": "filegen-web-dev",
   "version": "1.0.0",
   "description": "it is a file gen that makes the desired files to make the files needed to start your project easily without having to take too much time",
   "main": "index.js",
@@ -8,10 +8,13 @@
     "start": "node index.js"
   },
   "bin": {
-    "filegen": "./index.js"
+    "filegen-web-dev": "index.js"
   },
   "keywords": [],
   "author": "AwerdDev",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "comander": "^0.0.1-security"
+  },
+  "devDependencies": {}
 }
-
