@@ -19,7 +19,7 @@ filegen-node-dev
  const fs = require("fs");
 const path = require("path");
 const { exec } = require('child_process');
-
+```
 # file content
 
 1- codenode for the java script files
@@ -45,8 +45,11 @@ function runcommands(commands, callback) {
     }
     executecommands(0);
 }
+```
 this runs the commands for the npm file you can add more  lines of code in the commands array
+
 # file dir
+
 ``` 
 function createDirectories(dirs, callback) {
     let index = 0;
@@ -67,7 +70,7 @@ function createDirectories(dirs, callback) {
     }
     createDir();
 }
-
+```
 this function creates the needed folders to store the files the code uses the dir and callback pramters first you have the index that >= dirs then you return the call back and then use the mk dir to make the needed folders and you will see this function being called in the end of the code 
 # genrating js files
 
@@ -89,6 +92,7 @@ function genfilenode() {
         });
     });
 }
+```
 this is the code for creating the files for the js folder first section we have an array with all the needed files with a path that leads to the js folder and the content for them and the seconde section is the function that acually makes the files using the for each it makes an js file by using the file path and content and a call back for when the function fails at creating the file or creates it correctly
 
 # genrating html files
@@ -110,7 +114,8 @@ function genwebfiles() {
         });
     });
 }
-here si the same as the js functions but for the html files the arrays can be changed to add and remove the files and make suitable for you make sure to add a path and content or it will not work and this is for the js,html,css
+```
+here is the same as the js functions but for the html files the arrays can be changed to add and remove the files and make suitable for you make sure to add a path and content or it will not work and this is for the js,html,css
 
 
 # genrating css files
@@ -134,6 +139,7 @@ function gencssfiles() {
         });
     });
 }
+```
 the same as the rest and can be changed to the breferd amount of files
 
 # excuting all the code 
@@ -151,6 +157,7 @@ createDirectories([path.join(process.cwd(), "js"), path.join(process.cwd(), "sty
     });
 });
 ```
+
 of course excuting the functions but it can only be done in a sertain order because of the folders it is best not to mess with this as it can breake every thing but here how it works you have the createDirectories function running and mking all the folders for all the files and you have the jsDir that is used to run the command lines in the js file instead of outside the folder and then exiting the folder and running the rest of the functions
 
 
