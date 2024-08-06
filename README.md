@@ -1,2 +1,2 @@
 # filegen
- it is a file gen that makes the desired files to make the files needed to start your project easily without having to take too much time
+ This is one of my projects that iam happy about making this .iam a 14 year old and this is one of my first projects that i made that makes my life a little easy and i hope for your  support and help for improvments I started learned how to code at 12 with scratch and then learned the basics of html and java script in school and the rest i learned all by myself with just the internet and now i started my journey to become a full stack devolper no matter what it takes and i will be intrested to hear about your ideas and ways to make my code better 
