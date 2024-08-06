@@ -6,11 +6,12 @@
  To call the app depending on which one you downloaded if you downloaded the web dev type in the command line 
 ```
 filegen-web-dev
-  
+```
+
 if the node version then type 
 ```
 filegen-node-dev
-
+```
 # app structure explaned
 
   # first the required processes for the project
