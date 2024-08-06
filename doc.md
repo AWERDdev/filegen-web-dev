@@ -45,7 +45,7 @@ function runcommands(commands, callback) {
     }
     executecommands(0);
 }
-
+```
 this runs the commands for the npm file you can add more  lines of code in the commands array
 
 # file dir
