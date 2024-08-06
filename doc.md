@@ -25,7 +25,7 @@ const { exec } = require('child_process');
 1- codenode for the java script files
 2- codeweb for the html files
 3- css content one for each file
-
+```
 # running commandline 
 ```
 function runcommands(commands, callback) {
@@ -45,7 +45,7 @@ function runcommands(commands, callback) {
     }
     executecommands(0);
 }
-
+```
 this runs the commands for the npm file you can add more  lines of code in the commands array
 # file dir
 ``` 
