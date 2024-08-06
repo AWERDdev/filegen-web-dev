@@ -45,6 +45,7 @@ function runcommands(commands, callback) {
     }
     executecommands(0);
 }
+```
 this runs the commands for the npm file you can add more  lines of code in the commands array
 # file dir
 ``` 
@@ -67,7 +68,7 @@ function createDirectories(dirs, callback) {
     }
     createDir();
 }
-
+```
 this function creates the needed folders to store the files the code uses the dir and callback pramters first you have the index that >= dirs then you return the call back and then use the mk dir to make the needed folders and you will see this function being called in the end of the code 
 # genrating js files
 
@@ -89,6 +90,7 @@ function genfilenode() {
         });
     });
 }
+```
 this is the code for creating the files for the js folder first section we have an array with all the needed files with a path that leads to the js folder and the content for them and the seconde section is the function that acually makes the files using the for each it makes an js file by using the file path and content and a call back for when the function fails at creating the file or creates it correctly
 
 # genrating html files
@@ -110,7 +112,8 @@ function genwebfiles() {
         });
     });
 }
-here si the same as the js functions but for the html files the arrays can be changed to add and remove the files and make suitable for you make sure to add a path and content or it will not work and this is for the js,html,css
+```
+here is the same as the js functions but for the html files the arrays can be changed to add and remove the files and make suitable for you make sure to add a path and content or it will not work and this is for the js,html,css
 
 
 # genrating css files
