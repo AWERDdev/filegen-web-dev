@@ -9,7 +9,7 @@
 # app structure explaned
 
   # first the required processes for the project
-
+'''
  const fs = require("fs");
 const path = require("path");
 const { exec } = require('child_process');
@@ -21,7 +21,7 @@ const { exec } = require('child_process');
 3- css content one for each file
 
 # running commandline 
-'''javascript
+'''
 function runcommands(commands, callback) {
         commands = [`npm init -y`,`npm i date-fns --D` , `npm i uuid --D`]
     function executecommands(index) {
@@ -41,8 +41,7 @@ function runcommands(commands, callback) {
 }
 this runs the commands for the npm file you can add more  lines of code in the commands array
 # file dir
-''' javascript
-
+''' 
 function createDirectories(dirs, callback) {
     let index = 0;
 
@@ -66,7 +65,7 @@ function createDirectories(dirs, callback) {
 this function creates the needed folders to store the files the code uses the dir and callback pramters first you have the index that >= dirs then you return the call back and then use the mk dir to make the needed folders and you will see this function being called in the end of the code 
 # genrating js files
 
-''' javascript
+'''
 function genfilenode() {
     // Create JavaScript files
     const nodefiles = [
@@ -87,7 +86,7 @@ function genfilenode() {
 this is the code for creating the files for the js folder first section we have an array with all the needed files with a path that leads to the js folder and the content for them and the seconde section is the function that acually makes the files using the for each it makes an js file by using the file path and content and a call back for when the function fails at creating the file or creates it correctly
 
 # genrating html files
-''' javascript
+''' 
 function genwebfiles() {
     // Create HTML files
     const htmlFiles = [
@@ -109,7 +108,7 @@ here si the same as the js functions but for the html files the arrays can be ch
 
 
 # genrating css files
-''' javascript
+''' 
 function gencssfiles() {
     const cssFiles = [
         { path: path.join(process.cwd(), "styles", "body.css"), content: `/* CSS body */\n${cssbody}` },
@@ -133,7 +132,7 @@ the same as the rest and can be changed to the breferd amount of files
 
 # excuting all the code 
 
-'''javascript 
+'''
 // Execute functions
 createDirectories([path.join(process.cwd(), "js"), path.join(process.cwd(), "styles"), path.join(process.cwd(), "html")], () => {
     const jsDir = path.join(process.cwd(), "js");
