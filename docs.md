@@ -4,7 +4,12 @@
  bottom div and all of it's elements and lastly responsive.css is for craeting and making the css responsive.these differ from the web dev and node dev version as in the node dev there is no html or css files and just npm package and the file data instead of being in the server.js is in the index.js 
  # How to run app
  To call the app depending on which one you downloaded if you downloaded the web dev type in the command line 
-```filegen-web-dev  if the node version then type ```filegen-node-dev
+```
+filegen-web-dev
+  
+if the node version then type 
+```
+filegen-node-dev
 
 # app structure explaned
 
