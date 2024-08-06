@@ -150,7 +150,7 @@ createDirectories([path.join(process.cwd(), "js"), path.join(process.cwd(), "sty
         gencssfiles();
     });
 });
-
+```
 of course excuting the functions but it can only be done in a sertain order because of the folders it is best not to mess with this as it can breake every thing but here how it works you have the createDirectories function running and mking all the folders for all the files and you have the jsDir that is used to run the command lines in the js file instead of outside the folder and then exiting the folder and running the rest of the functions
 
 
