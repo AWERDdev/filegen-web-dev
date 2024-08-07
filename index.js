@@ -143,7 +143,7 @@ const cssres = `
 
 // Functions
 function runcommands(commands, callback) {
-    commands = [`npm init -y`,`npm i date-fns --D` , `npm i uuid --D`]
+    commands = [`npm init -y`,`npm i date-fns -D` , `npm i uuid -D`,`npm i bcrypt -D`]
     function executecommands(index) {
         if (index >= commands.length) {
             return callback();
