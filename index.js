@@ -70,23 +70,7 @@ const codeweb = `
     <!--main content-->
     <div class="main-content">
         <div class="section-countainer">
-        <div class="section1">
-            <h1>hello iam section 1</h1>
-            <p class="p1-main">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate nam omnis, tempora iure ex rerum eveniet quam quisquam reprehenderit eos debitis pariatur quibusdam, delectus vitae est dolores eius similique possimus! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum repellendus voluptates repellat qui tempore dolorum, quasi fuga neque perspiciatis nesciunt, doloremque, odit soluta deserunt fugit aliquam dignissimos pariatur unde optio?</p>
-        </div>
-        <div class="section2">
-            <h1>hello iam section 2</h1>
-            <p class="p1-main">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate nam omnis, tempora iure ex rerum eveniet quam quisquam reprehenderit eos debitis pariatur quibusdam, delectus vitae est dolores eius similique possimus! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum repellendus voluptates repellat qui tempore dolorum, quasi fuga neque perspiciatis nesciunt, doloremque, odit soluta deserunt fugit aliquam dignissimos pariatur unde optio?</p>
-        </div>
-        <div class="section3">
-            <h1>hello iam section 3</h1>
-            <p class="p1-main">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate nam omnis, tempora iure ex rerum eveniet quam quisquam reprehenderit eos debitis pariatur quibusdam, delectus vitae est dolores eius similique possimus! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum repellendus voluptates repellat qui tempore dolorum, quasi fuga neque perspiciatis nesciunt, doloremque, odit soluta deserunt fugit aliquam dignissimos pariatur unde optio?</p>
-        </div>
-        <div class="section4">
-            <h1>hello iam section 4</h1>
-            <p class="p1-main">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate nam omnis, tempora iure ex rerum eveniet quam quisquam reprehenderit eos debitis pariatur quibusdam, delectus vitae est dolores eius similique possimus! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum repellendus voluptates repellat qui tempore dolorum, quasi fuga neque perspiciatis nesciunt, doloremque, odit soluta deserunt fugit aliquam dignissimos pariatur unde optio?</p>
-        </div>
-    </div>
+      </div>
     </div>
     <!--bottom content-->
     <div class="end-bottom">
