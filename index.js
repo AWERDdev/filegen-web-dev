@@ -286,8 +286,6 @@ const cssmain = `
 
 }
 .section-countainer{
-    display: grid;
-    grid-template-columns: repeat(2 , 1fr);
     max-width: 100%;
     min-height: 100%;
 
