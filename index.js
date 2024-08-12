@@ -480,7 +480,7 @@ padding: 0;
 
 // Functions
 function runcommands(commands, callback) {
-    commands = [`npm init -y`,`npm i date-fns -D` , `npm i uuid -D`,`npm i bcrypt -D`]
+    commands = [`npm init -y`,`npm i date-fns -D uuid -D bcrypt -D`]
     function executecommands(index) {
         if (index >= commands.length) {
             return callback();
@@ -577,11 +577,16 @@ function gencssfiles() {
 // Execute functions
 createDirectories([path.join(process.cwd(), "js"), path.join(process.cwd(), "styles"), path.join(process.cwd(), "html")], () => {
     const jsDir = path.join(process.cwd(), "js");
-    process.chdir(jsDir);
+    
+
+    genfilenode();
+    genwebfiles();
+    gencssfiles();
+
+        process.chdir(jsDir);
     runcommands(['npm init -y'], () => {
         process.chdir("..");  // Go back to the root directory after npm init
-        genfilenode();
-        genwebfiles();
-        gencssfiles();
+        
     });
-});
+    })
+    
