@@ -174,6 +174,8 @@ const codeweblog = `
 const cssbody = `
 /* CSS body */
 
+
+
 /* Root for font sizes */
 :root {
     --fs-600: 2rem;
@@ -210,16 +212,18 @@ button{
     background-color: black;
     border: none;
     border-radius: 5px;
-    max-width: 20vh;
+    width: 4vh;
     min-height: 3vh;
     color: white;
     margin: 0;
     padding: 0;
         cursor: pointer;
 }    
+ 
 `;
 
 const csstitle = `
+
 
 /* Root for font sizes */
 :root {
@@ -262,13 +266,14 @@ h1{
     background-color: white;
     border: none;
     border-radius: 5px;
-    width: 15vh;
-    min-height: 5vh;
+    width: 10vh;
+    min-height: 4vh;
     color: black;
     margin: 0;
     padding: 0;
        cursor: pointer;
 }    
+   
 `;
 
 const cssmain = `
@@ -356,6 +361,9 @@ padding: 0;
 `
 const cssres = `
 
+
+
+
 @media(max-width:600px) {
     /* Root for font sizes */
     :root {
@@ -381,7 +389,7 @@ const cssres = `
         display: grid;
         justify-content: center;
         grid-template-columns:repeat(6, 5vh) ;
-     gap: 2vh;
+     gap: 3vh;
      margin: 0;
 padding: 0;
     }
@@ -393,7 +401,21 @@ padding: 0;
     
     
     }
-        
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      } 
+    button{
+        background-color: black;
+        border: none;
+        border-radius: 5px;
+        width: 5vh;
+        min-height: 3.50vh;
+        color: white;
+        margin: 0;
+        padding: 0;
+            cursor: pointer;
+    }    
+   
 }
     
 @media(min-width: 601px) {
@@ -404,6 +426,17 @@ padding: 0;
         margin: 0;
         padding: 0;
     }
+    .options-ul-top button{
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+        width: 7vh;
+        min-height: 2vh;
+        color: black;
+        margin: 0;
+        padding: 0;
+           cursor: pointer;
+    }  
     /*grid placement*/
     .options-ul-top{
     
@@ -417,6 +450,8 @@ padding: 0;
 padding: 0;
     }
 }
+  
+
 @media(min-width: 700px) {
     /* Body */
     html, body {
@@ -476,7 +511,46 @@ padding: 0;
         margin: 0;
         padding: 0;
     }
-}`;
+}
+@media (max-width: 542px) and (max-width: 600px) {
+    .options-ul-bottom{
+    
+        display: grid;
+        justify-content: center;
+        grid-template-columns:repeat(3, 5vh) ;
+     gap: 3vh;
+     margin: 0;
+padding: 0;
+    }
+}
+
+
+/* For screens between 700px and 991px */
+@media (min-width: 700px) and (max-width: 991px) {
+    .options-ul-top{
+    
+        color: white;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2vh;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media (min-width:992px) and (max-width:1400px){
+    .options-ul-top button{
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+        width: 6vh;
+        min-height: 2.50vh;
+        color: black;
+        margin: 0;
+        padding: 0;
+           cursor: pointer;
+    }  
+}
+`;
 
 // Functions
 function runcommands(commands, callback) {
