@@ -39,28 +39,13 @@ const codeweb = `
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--css files-->
-    <link rel="stylesheet" href="/styles/body.css">
-    <link rel="stylesheet" href="/styles/title.css">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/end.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
-    <!--change to your linking-->
+
     <title>app</title>
 </head>
 <body>
     <div class="title-start">
         <ul class="title-ul">
             <li><h1><!--change to your liking-->WebDev</h1></li>
-        </ul>
-        <ul class="options-ul-top">
-            <!--add and remove as much as needed-->
-            <li><button class="option" id="option">option</button></li>
-            <li><button class="option" id="option">option</button></li>
-            <li><button class="option" id="option">option</button></li>
-            <li><button class="option" id="option">option</button></li>
-            <li><button class="option" id="option">option</button></li>
-            <li><button class="option" id="option">option</button></li>
         </ul>
         <ul class="account-signin-ul">
             <li><a href="/html/signup.html" class="a1">Signup</a></li>
@@ -75,15 +60,7 @@ const codeweb = `
     <!--bottom content-->
     <div class="end-bottom">
         <div class="section1-left">
-            <ul class="options-ul-bottom">
-                <!--add and remove as much as needed-->
-                <li><a href="#" class="option">option</a></li>
-                <li><a href="#" class="option">option</a></li>
-                <li><a href="#" class="option">option</a></li>
-                <li><a href="#" class="option">option</a></li>
-                <li><a href="#" class="option">option</a></li>
-                <li><a href="#" class="option">option</a></li>
-            </ul>
+    
         </div>
         <div class="section2-right">
             <!--change when needed-->
@@ -94,6 +71,13 @@ const codeweb = `
     <script src="/js/index.js"></script>
     <script src="/js/test.js"></script>
     <script src="/js/styling.js"></script>
+        <!--css files-->
+    <link rel="stylesheet" href="/styles/body.css">
+    <link rel="stylesheet" href="/styles/title.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/end.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+    <!--change to your linking-->
 </body>
 </html>
 
@@ -104,13 +88,7 @@ const codewebsign = `
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--css files-->
-    <link rel="stylesheet" href="/styles/body.css">
-    <link rel="stylesheet" href="/styles/title.css">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/end.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
-    <!--change to your linking-->
+
     <title>app</title>
 </head>
 <body>
@@ -118,19 +96,37 @@ const codewebsign = `
         <ul class="title-ul">
             <li><h1><!--change to your liking-->WebDev</h1></li>
         </ul>
+        <ul class="account-signin-ul">
+            <li><a href="/html/signup.html" class="a1">Signup</a></li>
+            <li><a href="/html/login.html" class="a2">Login</a></li>
+        </ul>
     </div>
     <!--main content-->
     <div class="main-content">
         <div class="section-countainer">
-     
-    </div>
+      </div>
     </div>
     <!--bottom content-->
-    <div class="end-bottom"></div>
+    <div class="end-bottom">
+        <div class="section1-left">
+    
+        </div>
+        <div class="section2-right">
+            <!--change when needed-->
+            <p class="p1-end">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quo asperiores nihil officiis quaerat est dignissimos ea, soluta ex voluptatum deserunt nam odio aperiam illo. Enim possimus culpa numquam neque!</p>
+        </div>
+    </div>
     <!--javaScript files-->
     <script src="/js/index.js"></script>
     <script src="/js/test.js"></script>
-    <script src="/js/server.js"></script>
+    <script src="/js/styling.js"></script>
+        <!--css files-->
+    <link rel="stylesheet" href="/styles/body.css">
+    <link rel="stylesheet" href="/styles/title.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/end.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+    <!--change to your linking-->
 </body>
 </html>
 `
@@ -140,13 +136,7 @@ const codeweblog = `
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--css files-->
-    <link rel="stylesheet" href="/styles/body.css">
-    <link rel="stylesheet" href="/styles/title.css">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/end.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
-    <!--change to your linking-->
+
     <title>app</title>
 </head>
 <body>
@@ -154,19 +144,34 @@ const codeweblog = `
         <ul class="title-ul">
             <li><h1><!--change to your liking-->WebDev</h1></li>
         </ul>
+        <ul class="account-signin-ul">
+            <li><a href="/html/signup.html" class="a1">Signup</a></li>
+            <li><a href="/html/login.html" class="a2">Login</a></li>
+        </ul>
     </div>
     <!--main content-->
     <div class="main-content">
         <div class="section-countainer">
-        
-    </div>
+      </div>
     </div>
     <!--bottom content-->
-    <div class="end-bottom"></div>
+    <div class="end-bottom">
+        <div class="section1-left">
+    
+        </div>
+        <div class="section2-right">
+            <!--change when needed-->
+            <p class="p1-end">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quo asperiores nihil officiis quaerat est dignissimos ea, soluta ex voluptatum deserunt nam odio aperiam illo. Enim possimus culpa numquam neque!</p>
+        </div>
+    </div>
     <!--javaScript files-->
     <script src="/js/index.js"></script>
-    <script src="/js/test.js"></script>
-    <script src="/js/server.js"></script>
+    <script src="/js/styling.js"></script>
+        <!--css files-->
+    <link rel="stylesheet" href="/styles/body.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+    <!--change to your linking-->
 </body>
 </html>
 `
@@ -208,31 +213,7 @@ h1{
     margin: 0;
     padding: 0;
 }
-button{
-    background-color: black;
-    border: none;
-    border-radius: 5px;
-    width: 4vh;
-    min-height: 3vh;
-    color: white;
-    margin: 0;
-    padding: 0;
-        cursor: pointer;
-}    
- 
-`;
-
-const csstitle = `
-
-
-/* Root for font sizes */
-:root {
-    --fs-600: 2rem;
-    --fs-500: 1.25rem;
-    --fs-400: 1rem;
-}
-
-/* Title start */
+* Title start */
 .title-start {
     max-width: 100%;
     min-height: 10vh;
@@ -249,32 +230,9 @@ h1{
     font-size: 2rem;
 }
 
-.options-ul-top{
-    
-    color: white;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 2vh;
-    margin: 0;
-    padding: 0;
-}
-.account-signin-ul{
-    display: flex;
-    gap: 3vh;
-}
-.options-ul-top button{
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    width: 10vh;
-    min-height: 4vh;
-    color: black;
-    margin: 0;
-    padding: 0;
-       cursor: pointer;
-}    
-   
+ 
 `;
+
 
 const cssmain = `
 
@@ -321,15 +279,7 @@ margin: 20px 0px;
     margin: 20px 0px;
     text-wrap: balance;
 }
-`
-const endcss = `
-/* Root for font sizes */
-:root {
-    --fs-600: 2rem;
-    --fs-500: 1.25rem;
-    --fs-400: 1rem;
-}
-.end-bottom{
+    .end-bottom{
     max-width: 100%;
     min-height: 10vh;
     background-color: black;
@@ -360,196 +310,6 @@ padding: 0;
 }
 `
 const cssres = `
-
-
-
-
-@media(max-width:600px) {
-    /* Root for font sizes */
-    :root {
-        --fs-600: 1rem;
-        --fs-500: 1rem;
-        --fs-400: 0.56rem;
-    }
-
-    /* Body */
-    html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        scrollbar-width: thin;
-    }
-    /*grid placement*/
-    .options-ul-top{
-        display: none;
-    }
-    .options-ul-bottom{
-    
-        display: grid;
-        justify-content: center;
-        grid-template-columns:repeat(6, 5vh) ;
-     gap: 3vh;
-     margin: 0;
-padding: 0;
-    }
-    .section-countainer{
-        display: grid;
-        grid-template-columns: repeat(1 , 1fr);
-        max-width: 100%;
-        min-height: 100%;
-    
-    
-    }
-    .hide-scrollbar::-webkit-scrollbar {
-        display: none;
-      } 
-    button{
-        background-color: black;
-        border: none;
-        border-radius: 5px;
-        width: 5vh;
-        min-height: 3.50vh;
-        color: white;
-        margin: 0;
-        padding: 0;
-            cursor: pointer;
-    }    
-   
-}
-    
-@media(min-width: 601px) {
-    /* Body */
-    html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    .options-ul-top button{
-        background-color: white;
-        border: none;
-        border-radius: 5px;
-        width: 7vh;
-        min-height: 2vh;
-        color: black;
-        margin: 0;
-        padding: 0;
-           cursor: pointer;
-    }  
-    /*grid placement*/
-    .options-ul-top{
-    
-        color: white;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2vh;
-        margin: 0;
-        padding: 0;
-        margin: 0;
-padding: 0;
-    }
-}
-  
-
-@media(min-width: 700px) {
-    /* Body */
-    html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    /*grid placement*/
-    .options-ul-top{
-        margin: 0;
-        padding: 0;
-        color: white;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 3vh;
-        margin: 0;
-        padding: 0;
-    }
-}
-@media(min-width: 992px) {
-    /* Body */
-    html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    /*grid placement*/
-    .options-ul-top{
-        margin: 0;
-        padding: 0;
-        color: white;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 2vh;
-        margin: 0;
-        padding: 0;
-    }
-}
-@media(min-width: 1200px) {
-    /* Body */
-    html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    /*grid placement*/
-    .options-ul-top{
-        margin: 0;
-        padding: 0;
-        color: white;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 2vh;
-        margin: 0;
-        padding: 0;
-    }
-}
-@media (max-width: 542px) and (max-width: 600px) {
-    .options-ul-bottom{
-    
-        display: grid;
-        justify-content: center;
-        grid-template-columns:repeat(3, 5vh) ;
-     gap: 3vh;
-     margin: 0;
-padding: 0;
-    }
-}
-
-
-/* For screens between 700px and 991px */
-@media (min-width: 700px) and (max-width: 991px) {
-    .options-ul-top{
-    
-        color: white;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2vh;
-        margin: 0;
-        padding: 0;
-    }
-}
-@media (min-width:992px) and (max-width:1400px){
-    .options-ul-top button{
-        background-color: white;
-        border: none;
-        border-radius: 5px;
-        width: 6vh;
-        min-height: 2.50vh;
-        color: black;
-        margin: 0;
-        padding: 0;
-           cursor: pointer;
-    }  
-}
 `;
 
 // Functions
@@ -630,10 +390,8 @@ function genwebfiles() {
 
 function gencssfiles() {
     const cssFiles = [
-        { path: path.join(process.cwd(), "styles", "body.css"), content: `/* CSS body */\n${cssbody}` },
-        { path: path.join(process.cwd(), "styles", "title.css"), content: `/* CSS title/top */\n${csstitle}` },
-        { path: path.join(process.cwd(), "styles", "main.css"), content: `/* Main CSS page */\n${cssmain}` },
-        { path: path.join(process.cwd(), "styles", "end.css"), content: `/* End/bottom CSS */\n${endcss}` },
+        { path: path.join(process.cwd(), "styles", "body.css"), content: `/* CSS body */\n${cssbody}`+`${csstitle}` },
+        { path: path.join(process.cwd(), "styles", "main.css"), content: `/* Main CSS page */\n${cssmain}`+`${endcss}` },
         { path: path.join(process.cwd(), "styles", "responsive.css"), content: `/* Responsive CSS */\n${cssres}` }
     ];
 
